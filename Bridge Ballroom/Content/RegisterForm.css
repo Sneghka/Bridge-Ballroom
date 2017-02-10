@@ -24,45 +24,56 @@ body {
     text-align: center;
 }
 
-.register-form-background h2 {
-    color: #ffffff;
-}
+    .register-form-background h2 {
+        color: #ffffff;
+    }
+
 .register-form {
     text-align: center;
 }
-.register-form .form-group {
-    margin-bottom: 0;
-}
-.register-form .form-group, .register-form h2 {
-    display: inline-block;
-}
 
-.register-form .form-control {
-    background: transparent;
-    border: 2px solid #50695a;
-    border-radius: 0;
-    font-size: 22px;
-    color: #d8e6de;
-    height: 44px;
-    margin-bottom: 0;
-   }
-.register-form button.btn-success {
-    background-color: #54a76c;
-    border: 1px solid #54a76c;
-    border-radius: 0;
-    font-size: 22px;
-}
-.register-form button.btn-success:hover{
-    background-color:#408052;
-    border: 1px solid #408052;
-}
+    .register-form .form-group {
+        margin-bottom: 0;
+    }
+
+    .register-form .form-group, .register-form h2 {
+        display: inline-block;
+    }
+
+    .register-form .form-control {
+        background: transparent;
+        border: 2px solid #50695a;
+        border-radius: 0;
+        font-size: 22px;
+        color: #d8e6de;
+        height: 44px;
+        margin-bottom: 0;
+    }
+
+    .register-form button.btn-success {
+        background-color: #54a76c;
+        border: 1px solid #54a76c;
+        border-radius: 0;
+        font-size: 22px;
+    }
+
+        .register-form button.btn-success:hover {
+            background-color: #408052;
+            border: 1px solid #408052;
+        }
 
 .return-to-index {
     margin-top: 20px;
     font-size: 18px;
 }
-.error-message1, .error-message2,.error-message3 {
+
+.error-message1, .error-message2, .error-message3 {
     visibility: hidden;
-    color: red;
+    color: #d46f6f;
+        font-size: 16px;
 }
 
+.invalid-box {
+    box-shadow: 0px 0px 20px #dc7777;
+    border: 2px solid #966262 !important;
+}
