@@ -1,12 +1,11 @@
 ﻿body {
     width: 100%;
-    min-height: 100%;
     padding: 0;
     margin: 0;
 }
 
 .main-background {
-    background: url(images/Login_page_vertical_home.png) no-repeat;
+    background: url(images/Login_page_vertical_work.png) no-repeat;
     background-position: left bottom;
     width: 100%;
     /* min-height: 100%;*/
@@ -15,22 +14,28 @@
     position: relative;
 }
 
-.main-background form {
-    text-align: center;
-    display: inline-block;
-}
+    .main-background form {
+        text-align: center;
+        display: inline-block;
+    }
 
-.form-container {
+.login-form-container {
     position: absolute;
     top: 10%;
     left: 50%;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 65%;
-    text-align: center
+    text-align: center;
 }
 
-.form-control {
+.form-control.login {
+    -webkit-border-radius: 0;
     border-radius: 0;
+    -webkit-box-shadow: inset 1px -3px 10px rgba(107, 0, 0, 0.5);
     box-shadow: inset 1px -3px 10px rgba(107, 0, 0, 0.5);
     background-color: #fff8f8;
     border: 1px solid #676666;
@@ -42,10 +47,16 @@ button.login {
     color: #f7dbdb;
     background-color: #d6291a;
     border-color: #d6291a;
+    -webkit-border-radius: 2px;
     border-radius: 2px;
     font-size: 24px;
     padding: 4px 22px;
-    display: inline-block
+    display: inline-block;
+}
+
+button.login:hover {
+    background-color: #881207;
+    border-color: #881207; 
 }
 
 .button-block button {
@@ -58,5 +69,234 @@ button.login {
 
 /***********Adaptive design*********/
 
-@media screen and (max-width: 720px) {
+
+/******PHONES********/
+@media screen and (min-width: 320px ) and (orientation: landscape) {
+
+    .main-background {
+        background: url(images/Login_page_horizontal_work.png) no-repeat;
+        background-size: cover;
+        background-position: left bottom;
+    }
+
+    .login-form-container {
+        width: 40%;
+        top: 50%;
+        left: inherit;
+        right: 0;
+        text-align: center;
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+/******Tablets********/
+@media screen and (min-width: 600px ) and (max-device-width: 906px)  and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) {
+
+    .form-control.login {
+        height: 54px;
+        font-size: 18px;
+    }
+
+    .form-group.login {
+        margin-bottom: 25px;
+    }
+}
+@media screen and (min-width: 768px )  and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+    .form-control.login {
+        height: 54px;
+        font-size: 18px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .register {
+        margin-top: 40px;
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 768px ) and (max-device-width: 1024px)  and (orientation: portrait)  and (-webkit-max-device-pixel-ratio: 2) {
+
+    .form-control.login {
+        height: 54px;
+        font-size: 18px;
+    }
+
+    .form-group.login {
+        margin-bottom: 25px;
+    }
+
+    .register {
+        margin-top: 40px;
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 768px ) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+
+    .login-form-container {
+        width: 100%;
+           top: 15%;
+    }
+    .form-group {
+        display: inline-block;
+    }
+    .form-control.login {
+        height: 54px;
+        font-size: 18px;
+    }
+
+    .form-group.login {
+        margin-right: 35px;
+     
+    }
+    .register {
+        position: absolute;
+        top: 150%;
+        right: 5%;
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 768px ) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+
+    .login-form-container {
+        width: 100%;
+           top: 15%;
+    }
+    .form-group {
+        display: inline-block;
+    }
+    .form-control.login {
+        height: 54px;
+        font-size: 18px;
+    }
+
+    .form-group.login {
+        margin-right: 35px;
+     
+    }
+    .register {
+        position: absolute;
+        top: 150%;
+        right: 5%;
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 800px )  and (max-device-width: 1280px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .form-control.login {
+        height: 64px;
+        font-size: 22px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .register {
+        margin-top: 40px;
+        font-size: 22px;
+    }
+    button.login {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width: 800px )  and (max-device-width: 1280px) and (orientation: portrait) {
+    .form-control.login {
+        height: 64px;
+        font-size: 22px;
+    }
+
+    .form-group.login {
+        margin-bottom: 25px;
+    }
+
+    .register {
+        margin-top: 40px;
+        font-size: 22px;
+    }
+    button.login {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width: 800px )  and (max-device-width: 1280px) and (orientation: landscape) {
+    .form-control.login {
+        height: 64px;
+        font-size: 22px;
+    }
+
+    .form-group.login {
+        margin-bottom: 25px;
+    }
+
+    .register {
+        margin-top: 40px;
+        font-size: 22px;
+    }
+    button.login {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width: 800px )  and (max-device-width: 1280px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1.5) {
+    .form-control.login {
+        height: 64px;
+        font-size: 22px;
+    }
+
+    .form-group.login {
+        margin-bottom: 25px;
+    }
+
+    .register {
+        margin-top: 40px;
+        font-size: 22px;
+    }
+    button.login {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width: 1280px ) and (orientation: landscape) {
+    .form-control.login {
+        height: 64px;
+        font-size: 22px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .register {
+        margin-top: 40px;
+        font-size: 22px;
+    }
+    button.login {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+}
+@media screen and (min-device-width: 1440px ) and (orientation: landscape) {
+    .form-control.login {
+        height: 64px;
+        font-size: 22px;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .register {
+        margin-top: 40px;
+        font-size: 22px;
+    }
+    button.login {
+        font-size: 28px;
+        margin-top: 20px;
+    }
 }

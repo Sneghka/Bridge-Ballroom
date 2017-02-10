@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+<div class="register-form-background">
+    <h2>Sign up</h2>
+    <div class="register-form-container">
+        <form class="form register-form">
+            <div class="form-group">
+                <input type="text" class="form-control" id="userName" placeholder="username" >
+                <p class="error-message1">Error! Field shouldn't be empty! </p>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="password" >
+                <p class="error-message2">Error! Field shouldn't be empty! </p>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="confirm-password" placeholder="confirm password" >
+                <p class="error-message3">Error! Passwords aren't match! </p>
+            </div>
+            <button type="submit" class="btn btn-success register-button" >Register</button>
+        </form>
+    </div>
+    <div class="return-to-index">
+        @Html.ActionLink("Already registered? Login now.", "Index", "Home")
+    </div>
+</div>
+
