@@ -74,6 +74,7 @@ body {
 }
 
 .invalid-box {
+    -webkit-box-shadow: 0px 0px 20px #dc7777;
     box-shadow: 0px 0px 20px #dc7777;
     border: 2px solid #966262 !important;
 }

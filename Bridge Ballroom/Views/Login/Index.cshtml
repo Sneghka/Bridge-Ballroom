@@ -1,0 +1,29 @@
+﻿@using Bridge_Ballroom.Models
+@model LoginModels
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<div class="main-background">
+    <div class="login-form-container">
+
+       @using(@Html.BeginForm("Index", "Home", FormMethod.Get)){
+       
+            @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+            <div class="form-group login">
+                @Html.TextBoxFor(m => m.UserName, new {@class = "form-control login", @placeholder = "username", @id = "username"})
+            </div>
+            <div class="form-group login">
+                @Html.PasswordFor(m => m.Password, new {@class = "form-control login", @placeholder = "password", @id = "password"})
+            </div>
+            <button type="submit" class="btn btn-success login" value="log in">Login</button>
+     }
+
+
+        <div class="register">
+            @Html.ActionLink("Not a member? Sign up now.", "Register", "Login")
+        </div>
+    </div>
+</div>
+

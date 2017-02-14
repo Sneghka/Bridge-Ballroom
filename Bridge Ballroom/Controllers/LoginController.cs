@@ -6,8 +6,10 @@ using System.Web.Mvc;
 
 namespace Bridge_Ballroom.Controllers
 {
-    public class HomeController : Controller
+    public class LoginController : Controller
     {
+        // GET: Login
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();
@@ -17,6 +19,9 @@ namespace Bridge_Ballroom.Controllers
         {
             return View();
         }
-        
+
+
+    
+
     }
 }
