@@ -2,8 +2,8 @@
 
     $(".register-button").click(function (e) {
 
-       var user = $("#userName");
-        var password = $("#password");
+        var user = $("#UserName");
+        var password = $("#Password");
         var confirmPassword = $("#confirm-password");
 
         if (user.val() === "") {
@@ -26,7 +26,8 @@
        if ($(this).val() !== "") {
             $(this).removeClass("invalid-box");
             $(this).next().css("visibility", "hidden");
-        }
+           $(".error-message-name").empty();
+       }
     });
 
 

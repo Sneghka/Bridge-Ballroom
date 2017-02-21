@@ -44,6 +44,7 @@ body {
         background: transparent;
         border: 2px solid #50695a;
         border-radius: 0;
+        display:inline-block;
         font-size: 22px;
         color: #d8e6de;
         height: 44px;
@@ -65,6 +66,13 @@ body {
 .return-to-index {
     margin-top: 20px;
     font-size: 18px;
+}
+
+.error-message-name {
+   
+    color: #d46f6f;
+        font-size: 16px;
+    height: 24px;
 }
 
 .error-message1, .error-message2, .error-message3 {
