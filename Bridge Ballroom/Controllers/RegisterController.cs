@@ -11,7 +11,7 @@ namespace Bridge_Ballroom.Controllers
 {
     public class RegisterController : Controller
     {
-       public static UsersList users = new UsersList();
+       //public static UsersList users = new UsersList();
 
         // GET: Register
         public ActionResult Index()
@@ -25,7 +25,8 @@ namespace Bridge_Ballroom.Controllers
         [AllowAnonymous]
         public ActionResult Register(RegisterModels model)
         {
-            if (users.IsUserExist(model.UserName))
+            /*if (users.IsUserExist(model.UserName))*/
+            if (UsersList.IsUserExist(model.UserName))
             {
                 TempData["ErrorMessage"] = "The same name already exists.";
                 TempData["CurrentName"] = model.UserName;
@@ -34,7 +35,7 @@ namespace Bridge_Ballroom.Controllers
             var user = new UserModels();
             user.Name = model.UserName;
             user.Password = model.Password;
-            users.ListOfUser.Add(user);
+            UsersList.ListOfUser.Add(user);
            
             return RedirectToAction("Index","Login");
         }

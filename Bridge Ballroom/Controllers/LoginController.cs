@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Bridge_Ballroom.App_Start;
 using Bridge_Ballroom.Models;
 
 namespace Bridge_Ballroom.Controllers
@@ -33,9 +34,9 @@ namespace Bridge_Ballroom.Controllers
         [AllowAnonymous]
         public ActionResult Login(LoginModels model)
         {
-            var users = RegisterController.users;
+            //var users = RegisterController.users;
 
-            if (users.IsUserExist(model.UserName))
+            if (UsersList.IsUserExist(model.UserName))
             {
                 @ViewBag.Name = model.UserName;
                 return View();
