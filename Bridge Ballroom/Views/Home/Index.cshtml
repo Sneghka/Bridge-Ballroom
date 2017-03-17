@@ -1,0 +1,80 @@
+﻿@model Bridge_Ballroom.Models.UserModels
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+
+<header class="clearfix">
+    <div class="logo"><img src="../../Content/Images/logo.png" alt=""></div>
+    <div class="header-right-menu">
+
+        <div class="name">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    Hello, @ViewBag.Name
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Logout", "Index", "Login")</li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</header>
+
+<div class="home main-background"></div>
+<div class="main-content">
+    <div class="game-button">
+        <div class="dropdown">
+            <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">
+                New Game
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Compensation</a></li>
+                <li><a href="#">Robber</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="table-wrapper">
+        <div class="hint">
+            <p class="ns-winner">*NS - winner;</p>
+            <p class="we-winner">*WE - winner;</p>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>User list</th>
+                    <th>Score</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10/01/2017</td>
+                    <td>User1, User2, User3, User4</td>
+                    <td>15</td>
+                    <td>Done</td>
+                </tr>
+                <tr>
+                    <td>10/01/2017</td>
+                    <td>
+                        <p class="ns">User1</p>   <p class="ns">User2</p>   <p class="we">User3</p>   <p class="we">User4</p>
+                    </td>
+                    <td>15</td>
+                    <td>In progress</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

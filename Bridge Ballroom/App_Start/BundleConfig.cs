@@ -28,6 +28,7 @@ namespace Bridge_Ballroom
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/login.css",
+                      "~/Content/home.css",
                       "~/Content/registerform.css"));
         }
     }

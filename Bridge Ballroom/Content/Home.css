@@ -1,0 +1,114 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header {
+    padding: 5px;
+    position: relative;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+    background: #a90329;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #a90329 0%, #8f0222 44%, #6d0019 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #191818 0%, #6f031c 44%, #b51809 100%);
+    /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #060606 0%, #580101 44%, #060606 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1);
+    /* IE6-9 */
+}
+
+.home.main-background {
+    position: absolute;
+    background: url(background_main.png) repeat;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+}
+
+img {
+    width: 150px;
+}
+
+.logo {
+    margin-left: 20px;
+    float: left;
+}
+
+.header-right-menu {
+    right: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.name {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.name button {
+    font-size: 30px;
+    background-color: #ca2521;
+    border-color: #ca2521;
+}
+
+.game-button button {
+    font-size: 20px;
+    background-color: #222782;
+    border-color: #222782;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.game-button {
+    margin: 20px;
+}
+
+.game-button button:hover {
+    border-color: #070a46;
+    background-color: #070a46;
+}
+
+.hint p, table p {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.ns-winner {
+    color: blue;    
+}
+
+.we-winner {
+    color: red;
+}
+
+.table-wrapper {
+    padding: 20px;
+}
+
+table {
+    width: 80%;
+    display: table;
+    border-collapse: separate;
+    border: 2px solid black;
+    border-spacing: 2px;
+    border-color: gray;
+    font-size: 25px;
+    margin: auto;
+    text-align: center;
+}
+
+
+td, th {
+     border: 2px solid black;
+    text-align: center;
+}
