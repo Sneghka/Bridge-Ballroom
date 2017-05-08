@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Web;
-using Bridge_Ballroom.App_Start;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Bridge_Ballroom.Models
+namespace ModelsLayer
 {
-    public class RegisterModels
+    public class Register
     {
         [Required]
         [Display(Name = "Name")]
@@ -17,7 +17,5 @@ namespace Bridge_Ballroom.Models
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }
-       
-
     }
 }

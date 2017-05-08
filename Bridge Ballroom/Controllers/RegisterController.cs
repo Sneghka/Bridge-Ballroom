@@ -1,19 +1,19 @@
-﻿using Bridge_Ballroom.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using Bridge_Ballroom.App_Start;
+
+using BusinessLayer;
+using ModelsLayer;
 
 namespace Bridge_Ballroom.Controllers
 {
     public class RegisterController : Controller
     {
-       //public static UsersList users = new UsersList();
-
-        // GET: Register
+       
         public ActionResult Index()
         {
             @ViewBag.ErrorMessage = TempData["ErrorMessage"];
@@ -23,7 +23,7 @@ namespace Bridge_Ballroom.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public ActionResult Register(RegisterModels model)
+        public ActionResult Register(Register model)
         {
             /*if (users.IsUserExist(model.UserName))*/
             if (UsersList.IsUserExist(model.UserName))
@@ -32,7 +32,7 @@ namespace Bridge_Ballroom.Controllers
                 TempData["CurrentName"] = model.UserName;
                 return RedirectToAction("Index", "Register");
             }
-            var user = new UserModels();
+            var user = new User();
             user.Name = model.UserName;
             user.Password = model.Password;
             UsersList.ListOfUser.Add(user);
